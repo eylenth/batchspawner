@@ -8,7 +8,8 @@ from jupyterhub.utils import random_port, url_path_join
 from jupyterhub.services.auth import HubAuth
 
 def main(argv=None):
-    port = random_port()
+#    port = random_port()
+    port = '60269'
     hub_auth = HubAuth()
     hub_auth.client_ca = os.environ.get('JUPYTERHUB_SSL_CLIENT_CA', '')
     hub_auth.certfile = os.environ.get('JUPYTERHUB_SSL_CERTFILE', '')
