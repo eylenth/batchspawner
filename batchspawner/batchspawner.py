@@ -100,6 +100,10 @@ class BatchSpawnerBase(Spawner):
         help="Memory to request from resource manager"
         ).tag(config=True)
 
+    req_memoryhrss = Unicode('',
+        help=" h_rss memory to request from resource manager"
+        ).tag(config=True)
+
     req_nprocs = Unicode('',
         help="Number of processors to request from resource manager"
         ).tag(config=True)
