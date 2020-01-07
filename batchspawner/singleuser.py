@@ -1,5 +1,6 @@
 import os
 import sys
+import random
 
 from runpy import run_path
 from shutil import which
@@ -9,7 +10,7 @@ from jupyterhub.services.auth import HubAuth
 
 def main(argv=None):
 #    port = random_port()
-    port = 60269
+    port = random.randint(60000,61000)
     hub_auth = HubAuth()
     hub_auth.client_ca = os.environ.get('JUPYTERHUB_SSL_CLIENT_CA', '')
     hub_auth.certfile = os.environ.get('JUPYTERHUB_SSL_CERTFILE', '')
