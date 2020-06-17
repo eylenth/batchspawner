@@ -10,7 +10,7 @@ from jupyterhub.services.auth import HubAuth
 
 def main(argv=None):
 #    port = random_port()
-    port = random.randint(60000,60100)
+    port = random.randint(60000,61000)
 #    port = 60269
     hub_auth = HubAuth()
     hub_auth.client_ca = os.environ.get('JUPYTERHUB_SSL_CLIENT_CA', '')
